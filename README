@@ -1,0 +1,27 @@
+ icon-column-converter.php $file_source [$file_dest] 
+
+ try to convert each column of a file from _ICONV_FROM_ to _ICONV_TO_.
+ 
+ Sometimes... it not know why... ( because coders :D ) some scripts or apps dumps files with mixed codification, 
+ one column with utf8, another with iso-8859-1... and process this data is a madness.
+
+ This simple script try to convert each column in order to get a normalized output, all columns with the same codification.
+
+ It's easy, if I have a row with 4 columns, I get column by column, then I try to convert the ColumnX to our _ICONV_TO_, if fails , I left the column as is, if not, is converted.
+
+
+Castellano/Español
+
+Es un pequeño script que he creado para normalizar un fichero. 
+Lo uso en volcados de datos como csv en los que la codificación de cada columna puede variar, mezclando columnas de utf8 con iso-8895-1 ( aka latin1 ).
+A veces pasa con migraciones en las que la máquina de origen usa latin1 y la nueva máquina utf8 y mezclado con la 'pericia' de algunos desarrolladores provocan esta mezcla.
+
+Con este script consigo un fichero uniforme para ser procesado por otra aplicación ( normalmente arcaica también :D )
+
+
+
+
+ License : GNU/ GPL v3 
+ Author : Jorge Senín
+ website : http://www.senin.org
+ email : jorge@senin.org
